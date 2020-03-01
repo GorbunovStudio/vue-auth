@@ -243,10 +243,6 @@ module.exports = function () {
             auth = this.options.getAuthMeta(transition);
         }
 
-        if (auth) {
-            redirect = auth.redirect || this.options.authRedirect;
-        }
-
         this.options.logoutProcess.call(this, res, {redirect: redirect});
     }
 
